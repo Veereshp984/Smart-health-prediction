@@ -85,7 +85,7 @@ export default function App() {
     const payload = { age: Number(age), gender, bp: Number(bp), chol: Number(chol), glucose: Number(glucose) }
     setPrediction({ loading: true })
     try {
-      const res = await fetch('http://localhost:3000/predict', {
+       const res = await fetch('/api/predict',{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
